@@ -1,0 +1,33 @@
+<p>all works!</p>
+
+
+<div>
+<table border="1" align=center>
+    <tr>
+            <th>PRODUCT_ID</th>
+            <th>PRODUCT_NAME</th>
+            <th>PRODUCT_DESCRIPTION</th>
+            <th>PRODUCT_IMAGE</th>
+        </tr>
+        <tr *ngFor="let a of allProducts; let counter = index">
+            <td>{{a.product_id}}</td>
+            <td>{{a.product_name }}</td>
+            <td>{{a.product_description}}</td>
+            <td>{{a.product_image}}</td>
+            </tr>
+        </table>
+        </div>
+<br><br>
+    <tr *ngFor="let a of allProducts; let counter = index">
+        <div class="card" style="width: 32rem;">
+                <img src="assets/{{a.product_image}}" width="200" height="300" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">{{a.product_name}}</h5>
+                  <p class="card-text">ID: {{a.product_id}} </p>
+                  <p class="card-text">Description: {{a.product_description}} </p>
+                  
+                </div>
+              </div>
+            
+            </tr>
+              
